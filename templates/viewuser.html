@@ -1,0 +1,24 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">View Users</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+            <div class="user-cards">
+                {% for u in data %}
+                <div class="user-card">
+                    <div class="user-card-content">
+                        <h3>{{u.name}}</h3>
+                        <p><strong>Email:</strong> {{u.email}}</p>
+                        <p><strong>Phone:</strong> {{u.phone}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            </div>
+   
+        </div>
+    </section>
